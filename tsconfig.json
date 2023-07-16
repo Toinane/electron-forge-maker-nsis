@@ -1,15 +1,11 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es2019",
+    "target": "ES2021",
     "outDir": "dist",
-    "lib": ["dom", "es2019"],
     "sourceMap": true,
-    "rootDir": "./src",
-    "experimentalDecorators": true,
     "strict": true,
-    "esModuleInterop": true,
-    "declaration": true
+    "esModuleInterop": true
   },
-  "exclude": ["dist", "node_modules"]
+  "include": ["src/**/*"]
 }
