@@ -1,4 +1,24 @@
-# @imxeno/electron-forge-maker-nsis
-![npm](https://img.shields.io/npm/v/@imxeno/electron-forge-maker-nsis) ![npm (prod) dependency version](https://img.shields.io/npm/dependency-version/@imxeno/electron-forge-maker-nsis/@electron-forge/maker-base) ![npm](https://img.shields.io/npm/dw/@imxeno/electron-forge-maker-nsis)
+# @toinane/electron-forge-maker-nsis
 
-[electron-builder](https://github.com/electron-userland/electron-builder) nsis target for [electron-forge](https://github.com/electron-userland/electron-forge).
+## How to use
+
+In your forge.config.ts file:
+
+```typescript
+import { MakerNSIS } from '@toinane/electron-forge-maker-nsis';
+
+// This is the options you can set from app-builder-lib
+// import { PackagerOptions } from 'app-builder-lib';
+
+const config: ForgeConfig = {
+  makers: [new MakerNSIS({ options: PackagerOptions })]
+};
+
+export default config;
+```
+
+### Options
+
+You can set all options avalaible from `PackagerOptions` from `app-builder-lib`. See [Github documentation](https://github.com/electron-userland/electron-builder/blob/master/packages/app-builder-lib/src/packagerApi.ts#L9).
+
+See also [Electron-builder documentation](https://www.electron.build/configuration/configuration#configuration).
